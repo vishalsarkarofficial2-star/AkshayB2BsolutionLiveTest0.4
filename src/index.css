@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  --royal-blue: #0D47A1;
+  --royal-blue-dark: #0844A4;
+  --accent-orange: #FF6B00;
+  --accent-orange-hover: #E05E00;
+  --bg-white: #FFFFFF;
+  --bg-light: #F4F7FA;
+  --text-dark: #1E293B;
+  --border-color: #E2E8F0;
+  --primary-blue: #0D47A1;
+  --primary-blue-dark: #0844A4;
+  --gst-blue: #0D47A1;
+  --gst-orange: #FF6B00;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+  scrollbar-gutter: stable;
+  background-color: var(--bg-white);
+  color: var(--text-dark);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Custom scrollbar */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: rgba(11, 37, 69, 0.05);
+  border-radius: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(11, 37, 69, 0.2);
+  border-radius: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 107, 0, 0.8);
+}
+
